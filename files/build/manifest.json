@@ -1,18 +1,6 @@
 {
   "files/build/script.js": "/files/build/script.js",
   "files/build/styles.css": "/files/build/styles.css",
-  "files/build/video-poster.jpg": "/files/build/36c91ab1d07ac47c2a4aaec21542c61a.jpg",
-  "files/build/logo-fz.svg": "/files/build/48bb38291449e9dab249ef1bc139271b.svg",
-  "files/build/fire.jpg": "/files/build/aac5e4804397f5e1ba466429e765568a.jpg",
-  "files/build/animation-text.html": "/files/build/animation-text.html",
-  "files/build/butterfly.jpg": "/files/build/b8a4109c6ee139bbde5d1ea5552c276a.jpg",
-  "files/build/index.html": "/files/build/index.html",
-  "files/build/index2.html": "/files/build/index2.html",
-  "files/build/intersection-observer.html": "/files/build/intersection-observer.html",
-  "files/build/photoswipe.html": "/files/build/photoswipe.html",
-  "files/build/slider-video-fullscreen.html": "/files/build/slider-video-fullscreen.html",
-  "files/build/smooth-page-scroll.html": "/files/build/smooth-page-scroll.html",
-  "files/build/videos/slide01.mp4": "/files/build/videos/slide01.mp4",
-  "files/build/videos/slide02.mp4": "/files/build/videos/slide02.mp4",
-  "files/build/videos/video.mp4": "/files/build/videos/video.mp4"
+  "files/build/post_1.gif": "/files/build/6e851009ab7321ae80f6863a2750f653.gif",
+  "files/build/index.html": "/files/build/index.html"
 }
