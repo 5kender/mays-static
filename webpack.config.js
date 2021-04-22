@@ -48,7 +48,7 @@ Encore
   .addEntry('script', ['core-js/stable', 'regenerator-runtime/runtime', './src/script.js'])
   // will create build/styles.css
   .addStyleEntry('styles', './src/scss/styles.scss')
-  .addStyleEntry('ext_index2', './src/scss/ext_index2.scss')
+  //.addStyleEntry('ext_index2', './src/scss/ext_index2.scss')
 
   // uncomment if you use Sass/SCSS files
   .enableSassLoader()

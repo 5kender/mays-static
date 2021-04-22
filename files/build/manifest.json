@@ -1,16 +1,18 @@
 {
-  "files/build/ext_index2.css": "/files/build/ext_index2.css",
   "files/build/script.js": "/files/build/script.js",
   "files/build/styles.css": "/files/build/styles.css",
   "files/build/video-poster.jpg": "/files/build/36c91ab1d07ac47c2a4aaec21542c61a.jpg",
   "files/build/logo-fz.svg": "/files/build/48bb38291449e9dab249ef1bc139271b.svg",
-  "files/build/MaterialIcons-Filled.svg?nj6yv7": "/files/build/63d6bda0d2ce68f1b5a801ca5cfc2703.svg",
   "files/build/fire.jpg": "/files/build/aac5e4804397f5e1ba466429e765568a.jpg",
   "files/build/animation-text.html": "/files/build/animation-text.html",
-  "files/build/fonts/MaterialIcons-Filled.woff?nj6yv7": "/files/build/fonts/MaterialIcons-Filled.47b1d4d0.woff",
-  "files/build/fonts/MaterialIcons-Filled.ttf?nj6yv7": "/files/build/fonts/MaterialIcons-Filled.c1b24b6c.ttf",
+  "files/build/butterfly.jpg": "/files/build/b8a4109c6ee139bbde5d1ea5552c276a.jpg",
   "files/build/index.html": "/files/build/index.html",
   "files/build/index2.html": "/files/build/index2.html",
+  "files/build/intersection-observer.html": "/files/build/intersection-observer.html",
+  "files/build/photoswipe.html": "/files/build/photoswipe.html",
+  "files/build/slider-video-fullscreen.html": "/files/build/slider-video-fullscreen.html",
   "files/build/smooth-page-scroll.html": "/files/build/smooth-page-scroll.html",
+  "files/build/videos/slide01.mp4": "/files/build/videos/slide01.mp4",
+  "files/build/videos/slide02.mp4": "/files/build/videos/slide02.mp4",
   "files/build/videos/video.mp4": "/files/build/videos/video.mp4"
 }

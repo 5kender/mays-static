@@ -11,18 +11,11 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
 
-        <a class="navbar-toggler" href="#menu-mobile">
-            <div class="mobile-burger">
-                <div class="line">
-                    <div></div>
-                </div>
-                <div class="line">
-                    <div></div>
-                </div>
-                <div class="line">
-                    <div></div>
-                </div>
-            </div>
+        <a class="navbar-toggler menu-icon menu-icon-cross"  href="#menu-mobile">
+            <span></span>
+            <svg x="0" y="0" width="54px" height="54px" viewBox="0 0 54 54">
+                <circle cx="27" cy="27" r="26"></circle>
+            </svg>
         </a>
 
         <div class="collapse navbar-collapse">
@@ -58,34 +51,294 @@
 </header>
 
     <main role="main" class="py-5">
-        <div class="container mb-5">
-    <h4>Custom select</h4>
-    <form>
-        <div class="select">
-            <div class="selectWrapper">
-                <select class="selectNative js-selectNative" aria-labelledby="jobLabel">
-                    <option value="sel" disabled="" selected=""> Select role...</span>
-                    <option value="ds">UI/UX Designer</option>
-                    <option value="fe">Frontend Engineer</option>
-                    <option value="be">Backend Engineer</option>
-                    <option value="qa">QA Engineer</option>
-                    <option value="un">Unicorn</option>
-                </select>
+        <div class="container">
+    <div class="mb-5">
+        <h4 class="title h3 mb-4">Utilities classes for css-grid : grid-cols, col-span, row-span, gap</h4>
+        <div class="text-white d-grid gap-4 grid-cols-sm-2 grid-cols-md-4">
+            <div class="bg-success p-3">Grille</div>
+            <div class="bg-success col-span-lg-2 p-3">col-span-2</div>
+            <div class="bg-success p-3">Grille</div>
+            <div class="bg-success row-span-lg-2 p-3">row-span-2</div>
+            <div class="bg-success p-3">Grille</div>
+            <div class="bg-success p-3">Grille</div>
+            <div class="bg-success p-3">Grille</div>
+            <div class="bg-success col-span-lg-3 p-3">col-span-3</div>
+        </div>
+    </div>
+    <div class="mb-5">
+        <h4 class="title h3 mb-4">Auto placement with grid-flow-row-*-dense classes</h4>
+        <div class="text-white d-grid gap-2 grid-flow-row-sm-dense grid-cols-sm-3 grid-cols-md-6">
+            <div class="bg-info p-3">1</div>
+            <div class="bg-info p-3 col-span-sm-3">2</div>
+            <div class="bg-info p-3 col-psna-sm-2">3</div>
+            <div class="bg-info p-3 col-span-sm-3">4</div>
+            <div class="bg-info p-3">5</div>
+            <div class="bg-info p-3">6</div>
+            <div class="bg-info p-3 col-span-sm-3">7</div>
+            <div class="bg-info p-3">8</div>
+            <div class="bg-info p-3 col-span-sm-3">9</div>
+            <div class="bg-info p-3">10</div>
+            <div class="bg-info p-3">11</div>
+            <div class="bg-info p-3">12</div>
+            <div class="bg-info p-3 col-psna-sm-2">13</div>
+            <div class="bg-info p-3">14</div>
+            <div class="bg-info p-3">15</div>
+            <div class="bg-info p-3 col-psna-sm-2">16</div>
+        </div>
+    </div>
+    <div class="mb-5">
+        <h4 class="title h3 mb-4">grid column start - grid row start - grid auto flow - grid auto columns - gap</h4>
+        <div class="d-grid grid-cols-1 grid-cols-sm-3 grid-cols-lg-4 gap-x-1 gap-y-4 ">
+            <div class="bg-warning p-4">col</div>
+            <div class="bg-warning p-4 row-span-lg-3">row-span-3</div>
+            <div class="bg-warning col-span-md-2 p-4">col-span-2</div>
+            <div class="bg-warning p-4 row-span-lg-2">row-span-2</div>
+            <div class="bg-warning p-4 row-span-lg-2">row-span-2</div>
+            <div class="bg-warning p-4">col</div>
+            <div class="bg-warning p-4 col-end-lg-5">col-end-5</div>
+            <div class="bg-warning p-4 col-start-lg-2 col-span-lg-2">col-start-2 col-span-2</div>
+            <div class="bg-warning p-4 col-start-lg-1 col-end-lg-2">col-start-1 col-end-2</div>
+            <div class="bg-warning p-4 col-end-lg-5 col-span-lg-1">col-end-5 col-span-1</div>
+            <div class="bg-warning p-4 col-start-lg-1 col-end-lg-5">col-start-1 col-end-5</div>
+        </div>
+    </div>
+</div>
 
-                <!-- Hide the custom select from AT (e.g. SR) using aria-hidden -->
-                <div class="selectCustom js-selectCustom" aria-hidden="true">
-                    <div class="selectCustom-trigger">Select role...</div>
-                    <div class="selectCustom-options">
-                        <div class="selectCustom-option" data-value="ds">UI/UX Designer</div>
-                        <div class="selectCustom-option" data-value="fe">Frontend Engineer</div>
-                        <div class="selectCustom-option" data-value="be">Backend Engineer</div>
-                        <div class="selectCustom-option" data-value="qa">QA Engineer</div>
-                        <div class="selectCustom-option" data-value="un">Unicorn</div>
-                    </div>
+        <div class="container">
+    <div class="mb-5">
+        <h4 class="title h3 mb-4">Ratio boxes</h4>
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="aspect-ratio-box aspect-radio-box-50 bg-primary text-white p-4 mb-4">
+                    <p class="h1">.aspect-radio-box-50</p>
+                </div>
+                <div class="aspect-ratio-box aspect-radio-box-25 bg-primary text-white p-4">
+                    <p class="h1">.aspect-radio-box-25</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="aspect-ratio-box aspect-radio-box-100 bg-primary text-white p-4">
+                    <p class="h1">.aspect-radio-box-100</p>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+        <div class="container mb-5">
+    <h4>Custom utilities gap, grid</h4>
+    <div class="d-grid gap-2 d-md-block">
+        <a href="#" class="btn btn-primary">Button</a>
+        <a href="#" class="btn btn-primary">Button</a>
+    </div>
+</div>
+
+        <div class="container mb-5">
+    <h4>Custom gutters y (classes "gy-*")</h4>
+    <div class="row gy-4">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    Content
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    Content
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    Content
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    Content
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    Content
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="container mb-5">
+    <h4>Responsive headings</h4>
+    <h1>h1. Bootstrap heading</h1>
+    <h2>h2. Bootstrap heading</h2>
+    <h3>h3. Bootstrap heading</h3>
+    <h4>h4. Bootstrap heading</h4>
+    <h5>h5. Bootstrap heading</h5>
+    <h6>h6. Bootstrap heading</h6>
+</div>
+
+        <div class="container mb-5">
+    <h4>Custom Switches</h4>
+    <form>
+        <div class="custom-control custom-switch custom-switch-sm">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">custom-switch-sm</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch2">
+            <label class="custom-control-label" for="customSwitch2">custom-switch</label>
+        </div>
+        <div class="custom-control custom-switch custom-switch-lg">
+            <input type="checkbox" class="custom-control-input" id="customSwitch3">
+            <label class="custom-control-label" for="customSwitch3">custom-switch-lg</label>
+        </div>
     </form>
+</div>
+
+        <div class="container py-5">
+    <h4 class="mb-4">FAQ example</h4>
+    <div class="faq" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1 Collapsible Group Item #1
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="faq-answer collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2 Collapsible Group Item #2
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="faq-answer collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3 Collapsible Group Item #3
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="faq-answer collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="mb-5">
+                <h4>Slider video fullscreen</h4>
+                <a href="slider-video-fullscreen.html">exemple</a>
+            </div>
+        </div>
+        <div class="container">
+    <h4>Spacing & centering buttons inside tables</h4>
+    <table class="table table-striped mb-5">
+        <thead>
+        <tr>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col" class="w-25">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>
+                <div class="btn-wrapper btn-wrapper-sm">
+                    <a href="#" class="btn btn-sm btn-primary btn-square">
+                        A
+                    </a>
+                    <a href="#" class="btn btn-sm btn-primary btn-square">
+                        B
+                    </a>
+                    <a href="#" class="btn btn-sm btn-primary btn-square">
+                        C
+                    </a>
+                    <a href="#" class="btn btn-sm btn-primary btn-square">
+                        D
+                    </a>
+                    <a href="#" class="btn btn-sm btn-primary btn-square">
+                        E
+                    </a>
+                    <a href="#" class="btn btn-sm btn-primary btn-square">
+                        F
+                    </a>
+                    <a href="#" class="btn btn-sm btn-primary btn-square">
+                        G
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>
+                <div class="btn-wrapper btn-wrapper-sm">
+                    <a href="#" class="btn btn-sm btn-primary">
+                        Button inside table
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>
+                <div class="btn-wrapper">
+                    <a href="#" class="btn btn-primary btn-square">
+                        A
+                    </a>
+                    <a href="#" class="btn btn-primary btn-square">
+                        B
+                    </a>
+                    <a href="#" class="btn btn-primary btn-square">
+                        C
+                    </a>
+                    <a href="#" class="btn btn-primary btn-square">
+                        D
+                    </a>
+                    <a href="#" class="btn btn-primary btn-square">
+                        E
+                    </a>
+                    <a href="#" class="btn btn-primary btn-square">
+                        F
+                    </a>
+                    <a href="#" class="btn btn-primary btn-square">
+                        G
+                    </a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
         <div class="container">
@@ -97,34 +350,34 @@
                 <div class="mb-3">
                     <button type="button" class="btn btn-sm btn-primary">Primary</button>
                     <button type="button" class="btn btn-sm btn-rounded btn-primary">Primary</button>
-                    <button type="button" class="btn btn-sm btn-circle btn-primary"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-sm btn-square btn-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-sm btn-circle btn-primary"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-sm btn-square btn-primary"><i class="fas fa-check"></i></button>
                 </div>
                 <div class="mb-3">
                     <button type="button" class="btn btn-primary">Primary</button>
                     <button type="button" class="btn btn-rounded btn-primary">Primary</button>
-                    <button type="button" class="btn btn-circle btn-primary"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-square btn-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-circle btn-primary"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-square btn-primary"><i class="fas fa-check"></i></button>
                 </div>
                 <div class="mb-3">
                     <button type="button" class="btn btn-lg btn-primary">Primary</button>
                     <button type="button" class="btn btn-lg btn-rounded btn-primary">Primary</button>
-                    <button type="button" class="btn btn-lg btn-circle btn-primary"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-lg btn-square btn-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-circle btn-primary"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-primary"><i class="fas fa-check"></i></button>
                 </div>
                 <h4>Custom "pushed" effect</h4>
                 <div class="mb-3">
-                    <button type="button" class="btn btn-lg btn-success push-effect d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
-                    <button type="button" class="btn btn-lg btn-rounded btn-success push-effect d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
-                    <button type="button" class="btn btn-lg btn-circle btn-success push-effect"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-lg btn-square btn-success push-effect"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-success push-effect d-inline-flex align-items-center"><i class="fas fa-check mr-2"></i>Success</button>
+                    <button type="button" class="btn btn-lg btn-rounded btn-success push-effect d-inline-flex align-items-center"><i class="fas fa-check mr-2"></i>Success</button>
+                    <button type="button" class="btn btn-lg btn-circle btn-success push-effect"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-success push-effect"><i class="fas fa-check"></i></button>
                 </div>
                 <h4>Custom monochrome</h4>
                 <div class="mb-3">
-                    <button type="button" class="btn btn-lg btn-monochrome-danger d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
-                    <button type="button" class="btn btn-lg btn-rounded btn-monochrome-success d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
-                    <button type="button" class="btn btn-lg btn-circle btn-monochrome-warning"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-lg btn-square btn-monochrome-info"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-monochrome-danger d-inline-flex align-items-center"><i class="fas fa-check mr-2"></i>Success</button>
+                    <button type="button" class="btn btn-lg btn-rounded btn-monochrome-success d-inline-flex align-items-center"><i class="fas fa-check mr-2"></i>Success</button>
+                    <button type="button" class="btn btn-lg btn-circle btn-monochrome-warning"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-monochrome-info"><i class="fas fa-check"></i></button>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -132,34 +385,23 @@
                 <div class="mb-3">
                     <button type="button" class="btn btn-sm btn-outline-primary">Primary</button>
                     <button type="button" class="btn btn-sm btn-rounded btn-outline-primary">Primary</button>
-                    <button type="button" class="btn btn-sm btn-circle btn-outline-primary"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-sm btn-square btn-outline-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-sm btn-circle btn-outline-primary"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-sm btn-square btn-outline-primary"><i class="fas fa-check"></i></button>
                 </div>
                 <div class="mb-3">
                     <button type="button" class="btn btn-outline-primary">Primary</button>
                     <button type="button" class="btn btn-rounded btn-outline-primary">Primary</button>
-                    <button type="button" class="btn btn-circle btn-outline-primary"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-square btn-outline-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-circle btn-outline-primary"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-square btn-outline-primary"><i class="fas fa-check"></i></button>
                 </div>
                 <div class="mb-3">
                     <button type="button" class="btn btn-lg btn-outline-primary">Primary</button>
                     <button type="button" class="btn btn-lg btn-rounded btn-outline-primary">Primary</button>
-                    <button type="button" class="btn btn-lg btn-circle btn-outline-primary"><i class="material-icons">done</i></button>
-                    <button type="button" class="btn btn-lg btn-square btn-outline-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-circle btn-outline-primary"><i class="fas fa-check"></i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-outline-primary"><i class="fas fa-check"></i></button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="mb-5">
-        <h4 class="title h3 mb-4">Custom links</h4>
-        <p>
-            <a href="#" class="next">Next</a><br>
-            <a href="#" class="previous">Previous</a><br>
-            <a href="#" class="exit">Exit</a><br>
-            <a href="#" class="favorite">Favorite</a><br>
-            <a href="#" class="info">Info</a>
-        </p>
-
     </div>
 </div>
 
