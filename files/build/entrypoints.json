@@ -1,0 +1,19 @@
+{
+  "entrypoints": {
+    "script": {
+      "js": [
+        "/files/build/script.js"
+      ]
+    },
+    "styles": {
+      "css": [
+        "/files/build/styles.css"
+      ]
+    },
+    "ext_index2": {
+      "css": [
+        "/files/build/ext_index2.css"
+      ]
+    }
+  }
+}

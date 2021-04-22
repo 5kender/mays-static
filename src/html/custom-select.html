@@ -1,0 +1,29 @@
+<div class="container mb-5">
+    <h4>Custom select</h4>
+    <form>
+        <div class="select">
+            <div class="selectWrapper">
+                <select class="selectNative js-selectNative" aria-labelledby="jobLabel">
+                    <option value="sel" disabled="" selected=""> Select role...</span>
+                    <option value="ds">UI/UX Designer</option>
+                    <option value="fe">Frontend Engineer</option>
+                    <option value="be">Backend Engineer</option>
+                    <option value="qa">QA Engineer</option>
+                    <option value="un">Unicorn</option>
+                </select>
+
+                <!-- Hide the custom select from AT (e.g. SR) using aria-hidden -->
+                <div class="selectCustom js-selectCustom" aria-hidden="true">
+                    <div class="selectCustom-trigger">Select role...</div>
+                    <div class="selectCustom-options">
+                        <div class="selectCustom-option" data-value="ds">UI/UX Designer</div>
+                        <div class="selectCustom-option" data-value="fe">Frontend Engineer</div>
+                        <div class="selectCustom-option" data-value="be">Backend Engineer</div>
+                        <div class="selectCustom-option" data-value="qa">QA Engineer</div>
+                        <div class="selectCustom-option" data-value="un">Unicorn</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

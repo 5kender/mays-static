@@ -1,0 +1,8 @@
+@each $size, $length in $sizes {
+  .aspect-radio-box-#{$size} {
+    &:before {
+      padding-top: $length !important;
+    }
+  }
+}
+

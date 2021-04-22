@@ -1,0 +1,12 @@
+
+.custom-switch {
+  @include switch-size($custom-switch-width, $custom-switch-indicator-size-base, $custom-switch-indicator-size, $custom-switch-indicator-border-radius);
+}
+
+.custom-switch-sm {
+  @include switch-size($custom-switch-width-sm, $custom-switch-indicator-size-base-sm, $custom-switch-indicator-size-sm, $custom-switch-indicator-border-radius-sm);
+}
+
+.custom-switch-lg {
+  @include switch-size($custom-switch-width-lg, $custom-switch-indicator-size-base-lg, $custom-switch-indicator-size-lg, $custom-switch-indicator-border-radius-lg);
+}

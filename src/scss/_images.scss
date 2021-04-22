@@ -1,0 +1,25 @@
+.img-cover-container {
+  background-size:cover;
+  background-position:center center;
+  img {
+    display:none;
+  }
+  &.object-fit img{
+    display:block;
+    object-fit:cover;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  &.custom-object-fit{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
+}
+
+

@@ -1,0 +1,21 @@
+@mixin make-grid-gutters($gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    // Gutters
+    //
+    // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
+    @each $key, $value in $gutters {
+      .g#{$infix}-#{$key},
+      .gy#{$infix}-#{$key} {
+        //--#{$variable-prefix}gutter-y: #{$value};
+
+        margin-top: calc(#{$value} * -1);
+
+        > * {
+          margin-top: calc(#{$value};
+        }
+      }
+    }
+  }
+}

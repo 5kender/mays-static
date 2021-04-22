@@ -1,0 +1,83 @@
+.btn {
+  i {
+    line-height:inherit;
+  }
+
+  // Pour l'automatisation du centrage vertical et horizontal dans les boutons, quel que soit leur contenu (images, fonts spéciales, etc.)
+  /*
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:1px;
+  */
+
+}
+
+//
+// Monochrome buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-monochrome-#{$color} {
+    @include button-variant-monochrome($value, $value);
+  }
+}
+
+
+//
+// Custom rounded and circle buttons
+//
+
+.btn-rounded {
+  @include button-rounded($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height);
+}
+
+.btn-circle {
+  @include button-circle($btn-padding-y, $btn-font-size, $btn-line-height);
+}
+
+.btn-square {
+  @include button-square($btn-padding-y, $btn-font-size, $btn-line-height);
+}
+
+.btn-sm {
+
+  &.btn-rounded {
+    @include button-rounded($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm);
+  }
+
+  &.btn-circle {
+    @include button-circle($btn-padding-y-sm, $btn-font-size-sm, $btn-line-height-sm);
+  }
+
+  &.btn-square {
+    @include button-square($btn-padding-y-sm, $btn-font-size-sm, $btn-line-height-sm);
+  }
+
+}
+
+.btn-lg {
+
+  &.btn-rounded {
+    @include button-rounded($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg);
+  }
+
+  &.btn-circle {
+    @include button-circle($btn-padding-y-lg, $btn-font-size-lg, $btn-line-height-lg);
+  }
+
+  &.btn-square {
+    @include button-square($btn-padding-y-lg, $btn-font-size-lg, $btn-line-height-lg);
+  }
+
+}
+
+//
+// Push effect
+//
+
+@each $color, $value in $theme-colors {
+  .btn-monochrome-#{$color}.push-effect, .btn-#{$color}.push-effect, .btn-outline-#{$color}.push-effect  {
+    @include push-effect($value);
+  }
+}

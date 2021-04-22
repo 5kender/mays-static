@@ -1,0 +1,173 @@
+// Custom select
+
+// Both native and custom selects must have the same width/height.
+.selectNative,
+.selectCustom {
+  position: relative;
+  width: 100%;
+  height: $input-height;
+}
+
+// Make sure the custom select does not mess with the layout
+.selectCustom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+// This media query detects devices where the primary
+// input mechanism can hover over elements. (e.g. computers with a mouse)
+@media (hover: hover) {
+  // Since we are using a mouse, it's safe to show the custom select.
+  .selectCustom {
+    display: block;
+  }
+
+  // In a computer using keyboard? Then let's hide back the custom select
+  // while the native one is focused:
+  .selectNative:focus + .selectCustom {
+    display: none;
+  }
+}
+
+/* Add the focus states too, They matter, always! */
+.selectNative:focus,
+.selectCustom.isActive .selectCustom-trigger {
+  /*
+  outline: none;
+  box-shadow: white 0 0 0 0.2rem, #ff821f 0 0 0 0.4rem;
+
+   */
+  color: $input-focus-color;
+  background-color: $input-focus-bg;
+  border-color: $input-focus-border-color;
+  outline: 0;
+  @if $enable-shadows {
+    @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+  } @else {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+
+//
+// Rest of the styles to create the custom select.
+// Just make sure the native and the custom have a similar "box" (the trigger).
+//
+
+.select {
+  position: relative;
+}
+
+.selectLabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectNative,
+.selectCustom-trigger {
+  @include font-size($input-font-size);
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  border: $input-border-width solid $input-border-color;
+  @include border-radius($input-border-radius, 0);
+
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+}
+
+.selectNative {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 0.8rem;
+  padding: 0rem 0.8rem;
+}
+
+.selectCustom-trigger {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $input-bg;
+  padding: $input-padding-y $input-padding-x;
+  cursor: pointer;
+}
+
+.selectCustom-trigger::after {
+  content: "▾";
+  position: absolute;
+  top: 0;
+  line-height: $input-height-inner;
+  right: 0.8rem;
+}
+
+.selectCustom-trigger:hover {
+  //border-color: #8c00ff;
+}
+
+.selectCustom-options {
+  position: absolute;
+  top: calc(100% + #{$dropdown-spacer});
+  left: 0;
+  width: 100%;
+  border: $input-border-width solid $input-border-color;
+  @include border-radius($input-border-radius, 0);
+  background-color: $input-bg;
+  //box-shadow: 0 0 4px #e9e1f8;
+  z-index: 1;
+  padding: $input-padding-y 0;
+  display: none;
+}
+
+.selectCustom.isActive .selectCustom-options {
+  display: block;
+}
+
+.selectCustom-option {
+  position: relative;
+  padding: $input-padding-y $input-padding-x;
+  padding-left: calc(0.8rem + #{$input-padding-x});
+}
+
+.selectCustom-option.isHover {
+  background-color: $component-active-bg; // contrast AA
+  color: $component-active-color;
+}
+
+.selectCustom-option:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: $input-border-width solid $input-border-color;
+}
+
+.selectCustom-option.isActive::before {
+  content: "✓";
+  position: absolute;
+  left: 0.4rem;//.8
+}
+/*
+.custom-switch.custom-switch {
+  @include switch('md');
+}
+
+.custom-switch.custom-switch-sm {
+  @include switch('sm');
+}
+
+.custom-switch.custom-switch-lg {
+  @include switch('lg');
+}
+*/

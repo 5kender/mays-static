@@ -1,0 +1,30 @@
+.ts-line {
+  overflow: hidden;
+}
+/*
+.typewriter-cursor {
+  position: absolute;
+  display: block;
+  width:6px;
+  overflow:hidden;
+}
+
+.typewriter-chars {
+  position: absolute;
+  .chars {
+    visibility: hidden;
+  }
+}
+*/
+.typewriter-cursor {
+  position: absolute;
+  display: inline-block;
+}
+
+.typewriter-wrapper {
+  visibility:hidden;
+}
+
+.typewriter-chars {
+  position: absolute;
+}

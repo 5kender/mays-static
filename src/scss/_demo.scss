@@ -1,0 +1,30 @@
+header {
+  transform:translateZ(0);
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:200;
+}
+
+#app{
+  padding-top:56px;
+}
+
+.ts-line {
+  overflow: hidden;
+}
+
+.demo-element {
+  padding:250px 0;
+  &:nth-child(odd){
+    background-color:theme-color('primary');;
+    color:$white;
+  }
+  @include media-breakpoint-down(sm) {
+    padding:100px 0;
+    .display-3{
+      font-size:2.175rem;
+    }
+  }
+}

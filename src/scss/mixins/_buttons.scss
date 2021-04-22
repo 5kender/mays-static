@@ -1,0 +1,140 @@
+// Button rounded
+
+@mixin button-rounded($padding-y, $padding-x, $font-size, $line-height) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+  @include font-size($font-size);
+  line-height: $line-height;
+  @include border-radius((calc(#{($line-height * $font-size)/2} + #{$padding-y} + #{$btn-border-width})), 0);
+  white-space:nowrap;
+}
+
+// Button circle
+
+@mixin button-circle($padding-y, $font-size, $line-height) {
+  padding: $padding-y $padding-y;
+  @include font-size($font-size);
+  line-height: $line-height;
+  height:calc(#{$line-height * $font-size} + #{$padding-y * 2} + #{$btn-border-width * 2});
+  width:calc(#{$line-height * $font-size} + #{$padding-y * 2} + #{$btn-border-width * 2});
+  @include border-radius(50%, 0);
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+// Button Square
+
+@mixin button-square($padding-y, $font-size, $line-height) {
+  padding: $padding-y $padding-y;
+  @include font-size($font-size);
+  line-height: $line-height;
+  height:calc(#{$line-height * $font-size} + #{$padding-y * 2} + #{$btn-border-width * 2});
+  width:calc(#{$line-height * $font-size} + #{$padding-y * 2} + #{$btn-border-width * 2});
+  border-radius:0;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+// Push effect
+
+@mixin push-effect ($border-color) {
+  border-width:0;
+  border-bottom-width:$btn-border-width * 2;
+  box-shadow:$push-effect-box-shadow;
+  border-color: darken($border-color, 25%)!important;
+  @include transition(#{'border-with .15s ease-in-out, ' + $btn-transition});
+
+  &:active,
+  &.active {
+    border-bottom-width:0;
+    border-top-width:$btn-border-width * 2;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow:$push-effect-box-shadow;
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    box-shadow:$push-effect-box-shadow;
+  }
+}
+
+// Button monochrome
+
+@mixin button-variant-monochrome($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  @if(color-yiq($background) == $white){
+    color:lighten($background, 25%);
+  } @else {
+    color:darken($background, 20%);
+  }
+
+  @include gradient-bg($background);
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  @include hover {
+    @if(color-yiq($background) == $white){
+      color:lighten($background, 25%);
+    } @else {
+      color:darken($background, 20%);
+    }
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.focus {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+    }
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    @if(color-yiq($background) == $white){
+      color:lighten($background, 25%);
+    } @else {
+      color:darken($background, 20%);
+    }
+    background-color: $background;
+    border-color: $border;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    @if(color-yiq($background) == $white){
+      color:lighten($background, 25%);
+    } @else {
+      color:darken($background, 20%);
+    }
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
+    }
+    border-color: $active-border;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      }
+    }
+  }
+}

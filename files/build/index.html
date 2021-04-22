@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="/files/build/styles.css" rel="stylesheet"></head>
+<body>
+<div id="app">
+    <header class="header Fixed">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+
+        <a class="navbar-toggler" href="#menu-mobile">
+            <div class="mobile-burger">
+                <div class="line">
+                    <div></div>
+                </div>
+                <div class="line">
+                    <div></div>
+                </div>
+                <div class="line">
+                    <div></div>
+                </div>
+            </div>
+        </a>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+    <main role="main" class="py-5">
+        <div class="container mb-5">
+    <h4>Custom select</h4>
+    <form>
+        <div class="select">
+            <div class="selectWrapper">
+                <select class="selectNative js-selectNative" aria-labelledby="jobLabel">
+                    <option value="sel" disabled="" selected=""> Select role...</span>
+                    <option value="ds">UI/UX Designer</option>
+                    <option value="fe">Frontend Engineer</option>
+                    <option value="be">Backend Engineer</option>
+                    <option value="qa">QA Engineer</option>
+                    <option value="un">Unicorn</option>
+                </select>
+
+                <!-- Hide the custom select from AT (e.g. SR) using aria-hidden -->
+                <div class="selectCustom js-selectCustom" aria-hidden="true">
+                    <div class="selectCustom-trigger">Select role...</div>
+                    <div class="selectCustom-options">
+                        <div class="selectCustom-option" data-value="ds">UI/UX Designer</div>
+                        <div class="selectCustom-option" data-value="fe">Frontend Engineer</div>
+                        <div class="selectCustom-option" data-value="be">Backend Engineer</div>
+                        <div class="selectCustom-option" data-value="qa">QA Engineer</div>
+                        <div class="selectCustom-option" data-value="un">Unicorn</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+        <div class="container">
+    <div class="mb-5">
+        <h4 class="title h3 mb-4">Nouveaux styles de boutons</h4>
+        <div class="row">
+            <div class="col-lg-6">
+                <h4>Custom buttons -rounded -circle -square</h4>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                    <button type="button" class="btn btn-sm btn-rounded btn-primary">Primary</button>
+                    <button type="button" class="btn btn-sm btn-circle btn-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-sm btn-square btn-primary"><i class="material-icons">done</i></button>
+                </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-rounded btn-primary">Primary</button>
+                    <button type="button" class="btn btn-circle btn-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-square btn-primary"><i class="material-icons">done</i></button>
+                </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-lg btn-primary">Primary</button>
+                    <button type="button" class="btn btn-lg btn-rounded btn-primary">Primary</button>
+                    <button type="button" class="btn btn-lg btn-circle btn-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-primary"><i class="material-icons">done</i></button>
+                </div>
+                <h4>Custom "pushed" effect</h4>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-lg btn-success push-effect d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
+                    <button type="button" class="btn btn-lg btn-rounded btn-success push-effect d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
+                    <button type="button" class="btn btn-lg btn-circle btn-success push-effect"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-success push-effect"><i class="material-icons">done</i></button>
+                </div>
+                <h4>Custom monochrome</h4>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-lg btn-monochrome-danger d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
+                    <button type="button" class="btn btn-lg btn-rounded btn-monochrome-success d-inline-flex align-items-center"><i class="material-icons mr-2">done</i>Success</button>
+                    <button type="button" class="btn btn-lg btn-circle btn-monochrome-warning"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-monochrome-info"><i class="material-icons">done</i></button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4>Outline</h4>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-sm btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-sm btn-rounded btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-sm btn-circle btn-outline-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-sm btn-square btn-outline-primary"><i class="material-icons">done</i></button>
+                </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-rounded btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-circle btn-outline-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-square btn-outline-primary"><i class="material-icons">done</i></button>
+                </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-lg btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-lg btn-rounded btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-lg btn-circle btn-outline-primary"><i class="material-icons">done</i></button>
+                    <button type="button" class="btn btn-lg btn-square btn-outline-primary"><i class="material-icons">done</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-5">
+        <h4 class="title h3 mb-4">Custom links</h4>
+        <p>
+            <a href="#" class="next">Next</a><br>
+            <a href="#" class="previous">Previous</a><br>
+            <a href="#" class="exit">Exit</a><br>
+            <a href="#" class="favorite">Favorite</a><br>
+            <a href="#" class="info">Info</a>
+        </p>
+
+    </div>
+</div>
+
+        <div class="container mb-5">
+    <h2 class="title h3 mb-4">Swiper jS (exemple horizontal mouse scroll)</h2>
+    <div class="swiper-container border text-white">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg-dark">Slide 1</div>
+            <div class="swiper-slide bg-secondary">Slide 2</div>
+            <div class="swiper-slide bg-danger">Slide 3</div>
+            <div class="swiper-slide bg-warning">Slide 4</div>
+            <div class="swiper-slide bg-info">Slide 5</div>
+            <div class="swiper-slide bg-success">Slide 6</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Image object fit avec fallback pour IE11</h4>
+                <div class="position-relative" style="height:400px;">
+                    <div class="img-cover-container">
+                        <img src="/files/build/aac5e4804397f5e1ba466429e765568a.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Insertion d'images</h4>
+                <div class="bg-light" style="background-image: url('/files/build/48bb38291449e9dab249ef1bc139271b.svg')">
+                    <img src="/files/build/aac5e4804397f5e1ba466429e765568a.jpg" width="300" height="100">
+                </div>
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Include part</h4>
+                <div class="bg-dark" style="background-image: url('/files/build/48bb38291449e9dab249ef1bc139271b.svg')">
+    <img src="/files/build/48bb38291449e9dab249ef1bc139271b.svg" width="300" height="100">
+</div>
+<div class="bg-light">
+    <img src="/files/build/aac5e4804397f5e1ba466429e765568a.jpg" width="300" height="100">
+</div>
+<!--
+<div class="container">
+    <video class="mw-100" src="/files/build/videos/video.mp4" autoplay></video>
+</div>
+-->
+
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Video avec lancement après le chargement de la page et image placeholder</h4>
+                <video muted loop poster="/files/build/36c91ab1d07ac47c2a4aaec21542c61a.jpg" data-src="/files/build/videos/video.mp4"></video>
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Nouveau layout animé avec GSAP/Scrollmagic</h4>
+                <p>Voir sur <a href="animation-text.html">cette page</a></p>
+            </div>
+            <section class="animated-element py-5">
+    <p class="fade-up-lines h2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis velit vel lorem pulvinar dignissim in et ante. Aliquam erat volutpat. Aliquam dictum, est in laoreet auctor, eros urna aliquam lectus, vitae porta sapien neque vel orci. Vestibulum placerat felis nec ipsum aliquam dapibus.
+    </p>
+</section>
+
+            <section class="animated-element py-5">
+    <p class="fade-up-chars display-4">
+        Lorem ipsum
+    </p>
+</section>
+
+            <section class="animated-element py-5">
+    <p class="fade-up-down-chars display-1">
+        Project
+    </p>
+</section>
+
+            <section class="animated-element py-5">
+    <div class="typewriter-wrapper w-100">
+        <div id="typewriter-chars" class="typewriter-chars">This is my typed text with GSAP :)<br>Ligne supplémentaire ici</div>
+        <span id="cursor" class="typewriter-cursor">|</span>
+    </div>
+</section>
+
+            <section class="animated-element py-5">
+    <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <p class="h2">
+                Fade Img
+            </p>
+            <p>
+                Nunc nec velit pellentesque, imperdiet sapien ut, iaculis mi. Maecenas ornare ex id risus feugiat pellentesque. Curabitur consectetur, dui vehicula pretium facilisis, ipsum augue mollis neque, sed dapibus mi quam non magna. Morbi eget nibh magna. Pellentesque metus justo, rhoncus eget leo at, lobortis elementum metus. Pellentesque pulvinar quam vel ultricies imperdiet. Nulla facilisi. Aliquam tempor augue metus, at imperdiet metus tristique et.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <div class="fade-img">
+                <img src="/files/build/aac5e4804397f5e1ba466429e765568a.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="animated-element py-5">
+    <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <p class="h2">
+                Fade Up Img
+            </p>
+            <p>
+                Nunc nec velit pellentesque, imperdiet sapien ut, iaculis mi. Maecenas ornare ex id risus feugiat pellentesque. Curabitur consectetur, dui vehicula pretium facilisis, ipsum augue mollis neque, sed dapibus mi quam non magna. Morbi eget nibh magna. Pellentesque metus justo, rhoncus eget leo at, lobortis elementum metus. Pellentesque pulvinar quam vel ultricies imperdiet. Nulla facilisi. Aliquam tempor augue metus, at imperdiet metus tristique et.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <div class="fade-up-img">
+                <img src="/files/build/aac5e4804397f5e1ba466429e765568a.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="animated-element py-5">
+    <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <p class="h2">
+                Fade Down Img
+            </p>
+            <p>
+                Nunc nec velit pellentesque, imperdiet sapien ut, iaculis mi. Maecenas ornare ex id risus feugiat pellentesque. Curabitur consectetur, dui vehicula pretium facilisis, ipsum augue mollis neque, sed dapibus mi quam non magna. Morbi eget nibh magna. Pellentesque metus justo, rhoncus eget leo at, lobortis elementum metus. Pellentesque pulvinar quam vel ultricies imperdiet. Nulla facilisi. Aliquam tempor augue metus, at imperdiet metus tristique et.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <div class="fade-down-img">
+                <img src="/files/build/aac5e4804397f5e1ba466429e765568a.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+    <footer class="footer bg-primary text-white py-5">
+    <div class="container">
+        <p class="mb-0">Sticky footer</p>
+    </div>
+</footer>
+
+</div>
+    <nav id="menu-mobile">
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Our work</a>
+        </li>
+        <li>
+            <span>About us</span>
+            <ul>
+                <li>
+                    <a href="#">History</a>
+                </li>
+                <li>
+                    <span>The team</span>
+                    <ul>
+                        <li>
+                            <a href="#">Management</a>
+                        </li>
+                        <li>
+                            <a href="#">Sales</a>
+                        </li>
+                        <li>
+                            <a href="#">Development</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>Services</span>
+            <ul>
+                <li>
+                    <a href="#">Design</a>
+                </li>
+                <li>
+                    <a href="#">Development</a>
+                </li>
+                <li>
+                    <a href="#">Marketing</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+
+<script type="text/javascript" src="/files/build/script.js"></script></body>
+
+</html>

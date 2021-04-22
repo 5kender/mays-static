@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+</head>
+<body>
+<div id="app">
+    ${require(`../html/header.html`)}
+    <main role="main" class="py-5">
+        ${require('../html/css-grid.html')}
+        ${require('../html/ratio-box.html')}
+        ${require('../html/custom-utilities.html')}
+        ${require('../html/gutters-y.html')}
+        ${require('../html/responsive-headings.html')}
+        ${require('../html/custom-switches.html')}
+        ${require('../html/faq.html')}
+        <div class="container">
+            <div class="mb-5">
+                <h4>Slider video fullscreen</h4>
+                <a href="slider-video-fullscreen.html">exemple</a>
+            </div>
+        </div>
+        ${require('../html/tables.html')}
+        ${require('../html/custom-buttons.html')}
+        ${require('../html/swiper.html')}
+        <div class="container">
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Image object fit avec fallback pour IE11</h4>
+                <div class="position-relative" style="height:400px;">
+                    <div class="img-cover-container">
+                        <img src="${require('../img/fire.jpg')}">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Insertion d'images</h4>
+                <div class="bg-light" style="background-image: url('${require(`../img/logo-fz.svg`)}')">
+                    <img src="${require('../img/fire.jpg')}" width="300" height="100">
+                </div>
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Include part</h4>
+                ${require('../html/include.html')}
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Video avec lancement après le chargement de la page et image placeholder</h4>
+                <video muted loop poster="${require('../img/video-poster.jpg')}" data-src="${require('../video/video.mp4')}"></video>
+            </div>
+            <div class="mb-5">
+                <h4 class="title h3 mb-4">Nouveau layout animé avec GSAP/Scrollmagic</h4>
+                <p>Voir sur <a href="animation-text.html">cette page</a></p>
+            </div>
+            ${require(`../html/fade-up-lines.html`)}
+            ${require(`../html/fade-up-chars.html`)}
+            ${require(`../html/fade-up-down-chars.html`)}
+            ${require(`../html/typewriter-chars.html`)}
+            ${require(`../html/fade-img.html`)}
+            ${require(`../html/fade-up-img.html`)}
+            ${require(`../html/fade-down-img.html`)}
+        </div>
+    </main>
+    ${require(`../html/footer.html`)}
+</div>
+    ${require('../html/mmenu.html')}
+
+</body>
+
+</html>

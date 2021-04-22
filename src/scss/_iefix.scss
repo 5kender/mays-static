@@ -1,0 +1,49 @@
+//## Corrige Les espaces supplémentaires créés par IE11 lors de l'utilisation de flex-boxes.
+//## Dans le cas ou la taille des images pose aussi problème,
+//## supprimer le commentaire des règles concernant les images.
+
+.card,
+.card-body,
+.list-group,
+.breadcrumb,
+.btn-group,
+.input-group,
+.input-group-append,
+.input-group-prepend,
+.input-group-text,
+.media,
+.nav,
+.navbar,
+.navbar > .container-fluid,
+.navbar-nav,
+.pagination,
+.progress,
+.toast-header {
+  min-height:1px;
+  img {min-height:1px};
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .d#{$infix}-flex {
+      min-height:1px;
+      img {min-height:1px};
+    }
+  }
+}
+
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        .navbar-collapse {
+          min-height:1px;
+          img {min-height:1px};
+        }
+      }
+    }
+  }
+}

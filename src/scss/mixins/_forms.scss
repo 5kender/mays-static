@@ -1,0 +1,32 @@
+@mixin switch-size($switch-width, $custom-switch-size-base, $custom-switch-size, $custom-switch-radius) {
+
+  margin-bottom: .5rem;
+  padding-left: $switch-width + $custom-control-gutter;
+  min-height: $custom-switch-size-base;
+  display: flex;
+  align-items: center;
+
+  .custom-control-label {
+    &::before {
+      width: $switch-width;
+      height: $custom-switch-size-base;
+      top: ($font-size-base * $line-height-base - $custom-switch-size-base) / 2;
+      left: -($switch-width + $custom-control-gutter);
+      border-radius: $custom-switch-radius;
+    }
+
+    &::after {
+      top: add(($font-size-base * $line-height-base - $custom-switch-size-base) / 2, $custom-control-indicator-border-width * 2);
+      left: add(-($switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
+      width: $custom-switch-size;
+      height: $custom-switch-size;
+      border-radius: $custom-switch-radius;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      transform: translateX($switch-width - $custom-switch-size-base);
+    }
+  }
+}

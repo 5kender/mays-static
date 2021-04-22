@@ -1,0 +1,87 @@
+.faq {
+  .card-header {
+    border:0;
+    border-radius:0;
+    background:transparent;
+    padding:0;
+
+    .btn {
+      font-weight:$font-weight-bold;
+      position:relative;
+      border-radius:0;
+      outline: 0 none!important;
+      padding: $card-spacer-y $card-spacer-x;
+      color:$body-color;
+
+      @include hover-focus-active() {
+        box-shadow:none;
+        outline:0 none;
+        color:$primary;
+        text-decoration:none;
+      }
+
+      &:before, &:after {
+        transition: all .45s cubic-bezier(.4,0,0,1);
+        content:"";
+        position: absolute;
+        background-color: currentColor;
+        width: 14px;
+        height: 2px;
+        right: $card-spacer-x;
+        top: 50%;
+        margin-top: -1px;
+      }
+
+      &:before {
+        opacity:1;
+      }
+
+      &:after {
+        transform:rotate(-90deg);
+      }
+
+      &[aria-expanded="true"] {
+        color:$primary;
+        &:before {
+          transform: rotate(-90deg);
+          opacity:0;
+        }
+      }
+
+      &[aria-expanded="true"]:after {
+        transform: rotate(-180deg);
+
+      }
+    }
+  }
+
+  .card-body {
+    padding-top: 0;
+  }
+
+  .card {
+    background:transparent;
+    border:0;
+    border-radius:0;
+    border-left:1px solid $border-color;
+  }
+
+  .faq-answer{
+    &:before {
+      height:100%;
+      content:"";
+      display:block;
+      width:2px;
+      top:0;
+      left:0;
+      position:absolute;
+      background-color:$primary;
+      transform-origin:left top;
+      transform:scaleX(0);
+      transition:transform .45s cubic-bezier(.17,.67,.3,1.33);
+    }
+    &.show:before {
+      transform:scaleX(1);
+    }
+  }
+}
