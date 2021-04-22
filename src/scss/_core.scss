@@ -6,6 +6,8 @@ html, body {
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #fff7bf;
 }
 
 footer {
@@ -24,4 +26,7 @@ img {
   height:100%;
 }
 
-
+.post {
+  background: $white;
+  border: solid black 3px;
+}
