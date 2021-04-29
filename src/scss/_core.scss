@@ -67,6 +67,7 @@ img {
 
     &.unliked {
       left: 4px;
+      animation: depopping 50ms ease-in;
 
       &:before {
         background-image: url("../img/corn_seed.png");
@@ -77,11 +78,33 @@ img {
       }
     }
 
-    &.liked:before {
-      background-image: url("../img/popcorn.jpg");
-      height: 100%;
-      width: 100%;
-      transform: rotate(100deg);
+    &.liked {
+      animation: popping 30ms ease-in;
+
+      &:before {
+        background-image: url("../img/popcorn.jpg");
+        height: 100%;
+        width: 100%;
+        transform: rotate(100deg);
+      }
     }
+  }
+}
+
+@keyframes popping {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes depopping {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
