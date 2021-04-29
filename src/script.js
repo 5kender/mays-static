@@ -23,3 +23,15 @@ $(document).ready(() => {
 });
 
 
+let cornElems = document.getElementsByClassName('like-btn');
+cornElems.forEach(elem => {
+  elem.addEventListener('click', function () {
+    if (elem.classList.contains('unliked')) {
+      elem.classList.remove('unliked');
+      elem.classList.add('liked');
+    } else if (elem.classList.contains('liked')) {
+      elem.classList.remove('liked');
+      elem.classList.add('unliked');
+    }
+  });
+});

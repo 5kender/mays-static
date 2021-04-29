@@ -29,4 +29,59 @@ img {
 .post {
   background: $white;
   border: solid black 3px;
+  position: relative;
+}
+
+
+.box-like {
+  position: absolute;
+  bottom: -44px;
+  right: -3px;
+  background-color: $white;
+  border: solid 3px black;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-family: $headings-font-family;
+    font-weight: bold;
+  }
+
+  .like-btn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: -1px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &.unliked {
+      left: 4px;
+
+      &:before {
+        background-image: url("../img/corn_seed.png");
+        height: 80%;
+        width: 80%;
+        transform: rotate(290deg);
+        top: 5px;
+      }
+    }
+
+    &.liked:before {
+      background-image: url("../img/popcorn.jpg");
+      height: 100%;
+      width: 100%;
+      transform: rotate(100deg);
+    }
+  }
 }
