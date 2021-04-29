@@ -31,6 +31,7 @@ img {
   border: solid black 3px;
   position: relative;
   border-radius: $border-radius;
+  box-shadow: 5px 5px 0 0 black;
 }
 
 .pseudo {
@@ -39,7 +40,7 @@ img {
 
 .box-like {
   position: absolute;
-  bottom: -44px;
+  bottom: -46px;
   right: 7px;
   background-color: $white;
   border: solid 3px black;
