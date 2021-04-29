@@ -30,20 +30,25 @@ img {
   background: $white;
   border: solid black 3px;
   position: relative;
+  border-radius: $border-radius;
 }
 
+.pseudo {
+  font-family: $font-family-monospace;
+}
 
 .box-like {
   position: absolute;
   bottom: -44px;
-  right: -3px;
+  right: 7px;
   background-color: $white;
   border: solid 3px black;
   display: flex;
   align-items: center;
+  border-radius: 0 0 $border-radius $border-radius;
 
   p {
-    font-family: $headings-font-family;
+    font-family: $font-family-monospace;
     font-weight: bold;
   }
 
