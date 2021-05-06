@@ -8,6 +8,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #fff7bf;
+  background: radial-gradient(#DD6E42 7%, transparent 10%), radial-gradient(#DD6E42 7%, #fff7bf 10%);
+  background-size: 30px 30px, 30px 30px;
+  background-position: 0 0, 15px 15px;
 }
 
 footer {
