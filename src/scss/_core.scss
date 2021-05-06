@@ -97,6 +97,21 @@ img {
   }
 }
 
+.spoiler {
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    filter: blur(20px);
+
+    &:hover {
+      filter: none;
+      transition: all 80ms ease-in-out;
+    }
+  }
+}
+
+
 @keyframes popping {
   0% {
     transform: scale(0.7);
