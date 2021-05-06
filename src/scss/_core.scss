@@ -39,6 +39,25 @@ img {
 
 .pseudo {
   font-family: $font-family-monospace;
+
+  &.premium {
+    position: relative;
+    margin-right: 20px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/icon_premium.png);
+      height: 17px;
+      width: 17px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transform: rotate(100deg);
+      right: -21px;
+      top: 1px;
+    }
+  }
 }
 
 .box-like {
@@ -111,13 +130,6 @@ img {
       filter: none;
       transition: all 80ms ease-in-out;
     }
-  }
-}
-
-.premium {
-  &:after {
-    content: "";
-    background-image: url("../img/icon_premium.png");
   }
 }
 
