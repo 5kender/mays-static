@@ -5,7 +5,7 @@ const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plug
 const fs = require('fs');
 const path = require('path');
 
-const outputPath = 'files/build';
+const outputPath = 'assets/build';
 /******************
  * create output path
  *******************/
