@@ -48,6 +48,7 @@ $border-radius: 10px;
 // Color
 $primary: #F2542D;
 $secondary: #6BF178;
+$black: #000;
 
 // Font
 $font-family-monospace: 'IBM Plex Mono', monospace;
@@ -64,3 +65,7 @@ $navbar-light-hover-color: $secondary;
 
 $link-hover-decoration: none;
 $link-hover-color: $secondary;
+
+$hr-border-width: 2px;
+$hr-border-color: $black;
+$hr-margin-y: 1.5rem;

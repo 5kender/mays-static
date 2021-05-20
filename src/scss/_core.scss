@@ -23,6 +23,11 @@ img {
   height:auto;
 }
 
+hr {
+  width: calc(100% + 2 * 25px);
+  transform: translateX(-25px);
+}
+
 #app {
   display: flex;
   flex-direction: column;
@@ -41,6 +46,10 @@ img {
   position: relative;
   border-radius: $border-radius;
   box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000,  4px 4px #000, 5px 5px #000;
+
+  > p {
+    margin-bottom: 0;
+  }
 }
 
 .pseudo {
