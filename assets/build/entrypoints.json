@@ -2,12 +2,12 @@
   "entrypoints": {
     "script": {
       "js": [
-        "http://localhost:9000/files/build/script.js"
+        "/assets/build/script.js"
       ]
     },
     "styles": {
       "css": [
-        "http://localhost:9000/files/build/styles.css"
+        "/assets/build/styles.css"
       ]
     }
   }

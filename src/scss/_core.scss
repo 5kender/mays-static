@@ -9,8 +9,9 @@ body {
 
   background-color: #fff7bf;
   background-image: url("../img/cod_margin.png");
-  background-size: 85px;
-  background-position: 63px 63px;
+  background-size: 140px;
+  background-position: -22px -22px;
+  background-attachment: fixed;
 }
 
 footer {
@@ -29,12 +30,17 @@ img {
   height:100%;
 }
 
+.btn-primary:hover {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
 .post {
   background: $white;
   border: solid black 3px;
   position: relative;
   border-radius: $border-radius;
-  box-shadow: 5px 5px 0 0 black;
+  box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000,  4px 4px #000, 5px 5px #000;
 }
 
 .pseudo {
@@ -119,6 +125,23 @@ img {
   }
 }
 
+.box-comments {
+  position: absolute;
+  bottom: -46px;
+  right: 124px;
+  background-color: $white;
+  border: solid 3px black;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 $border-radius $border-radius;
+
+  p {
+    font-family: $font-family-monospace;
+    font-weight: bold;
+    margin: 3px 0;
+  }
+}
+
 .spoiler {
   overflow: hidden;
   display: inline-block;
@@ -130,6 +153,13 @@ img {
       filter: none;
       transition: all 80ms ease-in-out;
     }
+  }
+}
+
+.navbar {
+  border-bottom: solid 3px #000;
+  .navbar-brand {
+    font-size: 0;
   }
 }
 
