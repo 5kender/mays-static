@@ -18,6 +18,14 @@ footer {
   margin-top: auto;
 }
 
+header {
+  border-bottom: solid 3px #000;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
 img {
   max-width:100%;
   height:auto;
@@ -172,10 +180,16 @@ hr {
 }
 
 .navbar {
-  border-bottom: solid 3px #000;
   .navbar-brand {
     font-size: 0;
   }
+}
+
+.back {
+  position: fixed;
+  top: 129px;
+  z-index: 1;
+  margin-left: -115px;
 }
 
 @keyframes popping {
